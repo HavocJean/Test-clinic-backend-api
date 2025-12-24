@@ -24,9 +24,9 @@ Route::middleware('jwt.auth')->group(function () {
         Route::delete('/delete/{id}', [PatientController::class, 'destroy']);
 
         Route::get('/histories', [PatientHistoryController::class, 'index']);
-        Route::get('/info/{id}', [PatientHistoryController::class, 'show']);
-        Route::post('/register', [PatientHistoryController::class, 'store']);
-        Route::put('/update/{id}', [PatientHistoryController::class, 'update']);
+        Route::get('/history/info/{id}', [PatientHistoryController::class, 'show']);
+        Route::post('/history/register', [PatientHistoryController::class, 'store']);
+        Route::put('/history/update/{id}', [PatientHistoryController::class, 'update']);
         Route::delete('/history/{id}', [PatientHistoryController::class, 'destroy']);
     });
 
